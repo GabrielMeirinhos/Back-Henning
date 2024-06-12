@@ -10,10 +10,12 @@ app.use(express.json());
 //Rotas
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var produtosRouter = require('./routes/produtos');
 
 //Endpoints
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/produtos',produtosRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
